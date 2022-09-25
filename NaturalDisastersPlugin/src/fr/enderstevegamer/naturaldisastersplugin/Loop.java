@@ -21,7 +21,7 @@ public class Loop extends BukkitRunnable {
             if (Bukkit.getOnlinePlayers().size() > 0) {
                 TimeLeft--;
                 for (Player player : Bukkit.getOnlinePlayers()) {
-                    player.spigot().sendMessage(ChatMessageType.ACTION_BAR, TextComponent.fromLegacyText(ChatColor.GOLD + "Next event in " + ChatColor.RED + TimeLeft / 60 + ChatColor.GOLD + " minutes and " + ChatColor.RED + TimeLeft % 60 + ChatColor.GOLD + " seconds"));
+                    player.spigot().sendMessage(ChatMessageType.ACTION_BAR, TextComponent.fromLegacyText(ChatColor.GOLD + "Next event in " + ChatColor.RED + TimeLeft + ChatColor.GOLD + " seconds"));
                 }
             }
         }
