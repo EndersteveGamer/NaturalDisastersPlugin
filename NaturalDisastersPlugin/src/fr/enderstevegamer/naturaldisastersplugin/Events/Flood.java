@@ -22,24 +22,7 @@ public class Flood {
                     }
                 }
             }
-            for (int i = 0; i < 5 ; i++) {
-                int x = (int) (Math.random() * (20 - (-20) + 1)) + (-20);
-                int z = (int) (Math.random() * (20 - (-20) + 1)) + (-20);
-                int highestY = player.getWorld().getHighestBlockYAt(player.getLocation().add(x, 0, z));
-                Entity drowned = player.getWorld().spawnEntity(player.getLocation().add(x, -player.getLocation().getY() + highestY + 1 - 10, z), EntityType.DROWNED);
-                Drowned drowned2 = (Drowned) drowned;
-                ItemStack helmet = new ItemStack(Material.TURTLE_HELMET);
-                drowned2.getEquipment().setHelmet(helmet);
-                ItemStack trident = new ItemStack(Material.TRIDENT);
-                drowned2.getEquipment().setItemInMainHand(trident);
-            }
-            for (int i = 0; i < 5 ; i++) {
-                int x = (int) (Math.random() * (20 - (-20) + 1)) + (-20);
-                int z = (int) (Math.random() * (20 - (-20) + 1)) + (-20);
-                int highestY = player.getWorld().getHighestBlockYAt(player.getLocation().add(x, 0, z));
-                player.getWorld().spawnEntity(player.getLocation().add(x, -player.getLocation().getY() + highestY + 1 - 10, z), EntityType.GUARDIAN);
-            }
-            player.getWorld().setStorm(true);
+            player.getWorld().setThundering(true);
         }
     }
 }
